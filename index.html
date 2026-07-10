@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Riccio di Marketing — Marketing feito por gente de verdade</title>
+<link rel="icon" href="assets/images/logo.png" type="image/png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body style="background:var(--surface-page);font-family:var(--font-body);color:var(--text-ink);overflow-x:hidden">
+
+  <!-- SCROLL PROGRESS -->
+  <div id="scroll-progress" style="position:fixed;top:0;left:0;height:3px;background:var(--accent-secondary);z-index:100;transition:width 0.1s linear;width:0%"></div>
+
+  <!-- NAV -->
+  <nav style="position:absolute;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:clamp(12px,2vw,20px) clamp(16px,4vw,48px);background:transparent">
+    <a href="#hero" style="display:inline-flex;align-items:center"><img src="assets/images/logo.png" alt="Riccio di Marketing" style="height:clamp(52px,6vw,74px);width:auto"></a>
+    <div style="display:flex;gap:clamp(10px,2vw,26px);flex-wrap:wrap;font-size:14px;font-weight:600">
+      <a href="#sobre" style="color:var(--color-cream-50)">Sobre</a>
+      <a href="#servicos" style="color:var(--color-cream-50)">Serviços</a>
+      <a href="#cases" style="color:var(--color-cream-50)">Cases</a>
+      <a href="#equipe" style="color:var(--color-cream-50)">Equipe</a>
+      <a href="#contato" style="color:var(--color-cream-50)">Contato</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero" style="position:relative;min-height:92vh;display:flex;align-items:center;overflow:hidden">
+    <video id="hero-video" autoplay loop muted playsinline preload="auto" style="position:absolute;inset:0;width:100%;height:120%;object-fit:cover;animation:heroFadeIn 1.6s ease-out" src="https://videos.pexels.com/video-files/1739010/1739010-hd_1920_1080_30fps.mp4"></video>
+    <div style="position:absolute;inset:0;background:linear-gradient(180deg, rgba(28,58,80,0.5) 0%, rgba(35,70,92,0.42) 40%, rgba(44,26,14,0.7) 100%)"></div>
+    <div id="hero-glow" style="position:absolute;inset:0;background:radial-gradient(circle at 50% 40%, rgba(168,200,224,0.12) 0%, transparent 60%)"></div>
+    <div style="position:relative;z-index:2;max-width:900px;margin:0 auto;padding:clamp(24px,5vw,32px);text-align:center">
+      <h1 style="font-family:var(--font-display);font-weight:700;font-size:clamp(38px,7.4vw,80px);line-height:1.04;color:var(--color-cream-50);margin:0 0 16px">Marketing feito por <span style="color:var(--accent-emphasis)">gente de verdade.</span></h1>
+      <p style="font-size:clamp(16px,2.2vw,20px);color:var(--color-cream-50);opacity:0.92;max-width:560px;margin:0 auto 32px;line-height:1.5">Estratégia, criatividade e presença digital genuína — sem fórmula padrão, sem piloto automático.</p>
+      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:40px">
+        <a href="https://wa.me/5511930199061" target="_blank" class="btn-playful" style="display:inline-flex;align-items:center;gap:10px;background:var(--color-brown-900);color:var(--accent-emphasis);font-weight:700;font-size:15px;padding:16px 30px;border-radius:999px;box-shadow:var(--shadow-lg)">
+          <span style="width:20px;height:20px;background:var(--accent-emphasis);-webkit-mask:url(https://unpkg.com/lucide-static@latest/icons/message-circle.svg) center/contain no-repeat;mask:url(https://unpkg.com/lucide-static@latest/icons/message-circle.svg) center/contain no-repeat"></span>
+          Falar no WhatsApp
+        </a>
+        <a href="#cases" class="btn-playful" style="display:inline-flex;align-items:center;gap:8px;border:1.5px solid var(--color-cream-50);color:var(--color-cream-50);font-weight:700;font-size:15px;padding:16px 30px;border-radius:999px">Ver cases</a>
+      </div>
+    </div>
+    <div style="position:absolute;bottom:0;left:0;right:0;height:130px;z-index:1;pointer-events:none;background:linear-gradient(to bottom, rgba(250,246,238,0) 0%, rgba(250,246,238,0.5) 60%, var(--surface-page) 100%)"></div>
+    <a href="#sobre" style="position:absolute;bottom:22px;left:50%;transform:translateX(-50%);z-index:3;width:34px;height:34px;animation:floatBob 2.2s ease-in-out infinite">
+      <span style="display:block;width:100%;height:100%;background:var(--accent-secondary-soft);-webkit-mask:url(https://unpkg.com/lucide-static@latest/icons/chevron-down.svg) center/contain no-repeat;mask:url(https://unpkg.com/lucide-static@latest/icons/chevron-down.svg) center/contain no-repeat"></span>
+    </a>
+  </section>
+
+  <!-- TICKER -->
+  <div class="marquee">
+    <div class="marquee-track">
+      <div class="marquee-group"><span class="marquee-item">Estratégia</span><span class="marquee-item">Criatividade</span><span class="marquee-item">Conexão</span><span class="marquee-item">Resultado</span><span class="marquee-item">Autenticidade</span></div>
+      <div class="marquee-group"><span class="marquee-item">Estratégia</span><span class="marquee-item">Criatividade</span><span class="marquee-item">Conexão</span><span class="marquee-item">Resultado</span><span class="marquee-item">Autenticidade</span></div>
+    </div>
+  </div>
+
+  <!-- SOBRE -->
+  <section id="sobre" style="max-width:880px;margin:0 auto;padding:clamp(64px,10vw,120px) clamp(20px,5vw,32px);text-align:center">
+   <div data-reveal="about">
+    <div style="font-family:var(--font-script);font-size:clamp(22px,3vw,30px);color:var(--accent-support);margin-bottom:8px;transform:rotate(-1.5deg)">quem somos</div>
+    <p style="font-family:var(--font-display);font-size:clamp(20px,2.6vw,30px);line-height:1.5;color:var(--text-ink);margin:0 0 20px">Somos uma agência jovem, guiada por um propósito: acreditamos que marcas devem provocar sentimentos reais nas pessoas. Por isso convertemos negócios em experiências genuínas e conexões constantes — não queremos vender uma vez, queremos ser a única opção.</p>
+    <p style="font-size:clamp(15px,1.8vw,18px);color:var(--text-secondary);line-height:1.6;margin:0 0 28px">Nada de receita padrão: cada cliente é único, e a nossa abordagem também.</p>
+    <div style="display:inline-flex;align-items:center;gap:10px;background:var(--surface-sunken);border:1px solid var(--border-subtle);border-radius:999px;padding:10px 22px;font-size:14px;font-weight:600;color:var(--accent-primary)">
+      <span style="width:16px;height:16px;background:var(--accent-primary);-webkit-mask:url(https://unpkg.com/lucide-static@latest/icons/handshake.svg) center/contain no-repeat;mask:url(https://unpkg.com/lucide-static@latest/icons/handshake.svg) center/contain no-repeat"></span>
+      Colaboração real é o nosso maior diferencial
+    </div>
+   </div>
+  </section>
+
+  <div style="position:relative;height:0;z-index:20;pointer-events:none"><div style="position:absolute;left:0;right:0;top:-42px;height:84px;background:linear-gradient(to bottom, var(--surface-page) 0%, var(--surface-sunken) 100%)"></div></div>
+
+  <!-- SERVIÇOS -->
+  <section id="servicos" style="padding:clamp(48px,8vw,90px) clamp(16px,5vw,32px);background:var(--surface-sunken)">
+   <div data-reveal="services">
+    <div style="max-width:1100px;margin:0 auto">
+      <div style="text-align:center">
+        <span class="kicker rot-l">mão na massa</span>
+      </div>
+      <h2 style="font-family:var(--font-display);font-size:clamp(36px,5.8vw,60px);text-align:center;margin:0 0 4px;color:var(--text-ink)">O que fazemos</h2>
+      <svg class="title-squiggle" viewBox="0 0 140 16" width="140" height="16" style="margin:8px auto 14px" aria-hidden="true"><path d="M3 11 Q 22 2, 40 10 T 76 9 T 112 10 T 137 8" /></svg>
+      <p style="text-align:center;color:var(--text-muted);margin:0 0 40px;font-size:15px">Quatro frentes, uma só direção: resultado com gente de verdade por trás.</p>
+
+      <div id="services-viewport" style="position:relative;overflow:hidden;border-radius:var(--radius-lg);transition:height 0.6s cubic-bezier(.16,1,.3,1)">
+        <div id="services-track" style="display:flex;align-items:flex-start;transition:transform 0.6s cubic-bezier(.16,1,.3,1);transform:translateX(0%)">
+
+          <div style="flex:0 0 100%;padding:4px">
+            <div style="background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);box-shadow:var(--shadow-md);padding:clamp(28px,5vw,48px);display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px;min-height:320px;justify-content:center">
+              <div class="icon-blob hue-1" style="width:68px;height:68px;display:flex;align-items:center;justify-content:center">
+                <img src="https://unpkg.com/lucide-static@latest/icons/palette.svg" alt="" style="width:28px;height:28px">
+              </div>
+              <h3 style="font-family:var(--font-display);font-size:clamp(23px,2.9vw,33px);margin:0;color:var(--text-ink)">Branding &amp; Identidade Visual</h3>
+              <p style="font-size:15px;color:var(--text-secondary);max-width:440px;margin:0">Sua marca com personalidade — logo, cores e tipografia que geram reconhecimento à primeira vista.</p>
+            </div>
+          </div>
+
+          <div style="flex:0 0 100%;padding:4px">
+            <div style="background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);box-shadow:var(--shadow-md);padding:clamp(28px,5vw,48px);display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px;min-height:320px;justify-content:center">
+              <div class="icon-blob hue-2" style="width:68px;height:68px;display:flex;align-items:center;justify-content:center">
+                <img src="assets/images/instagram.svg" alt="" style="width:28px;height:28px">
+              </div>
+              <h3 style="font-family:var(--font-display);font-size:clamp(23px,2.9vw,33px);margin:0;color:var(--text-ink)">Redes Sociais &amp; Audiovisual</h3>
+              <p style="font-size:15px;color:var(--text-secondary);max-width:440px;margin:0">Você não perde mais tempo pensando no que postar.</p>
+            </div>
+          </div>
+
+          <div style="flex:0 0 100%;padding:4px">
+            <div style="background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);box-shadow:var(--shadow-md);padding:clamp(28px,5vw,48px);display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px;min-height:320px;justify-content:center">
+              <div class="icon-blob hue-3" style="width:68px;height:68px;display:flex;align-items:center;justify-content:center">
+                <img src="https://unpkg.com/lucide-static@latest/icons/trending-up.svg" alt="" style="width:28px;height:28px">
+              </div>
+              <h3 style="font-family:var(--font-display);font-size:clamp(23px,2.9vw,33px);margin:0;color:var(--text-ink)">Tráfego Pago</h3>
+              <p style="font-size:15px;color:var(--text-secondary);max-width:440px;margin:0">Campanhas orientadas por dados, leads mais qualificados e mais autoridade pra sua marca.</p>
+            </div>
+          </div>
+
+          <div style="flex:0 0 100%;padding:4px">
+            <div style="background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);box-shadow:var(--shadow-md);padding:clamp(28px,5vw,48px);display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px;min-height:320px;justify-content:center">
+              <div class="icon-blob hue-4" style="width:68px;height:68px;display:flex;align-items:center;justify-content:center">
+                <img src="https://unpkg.com/lucide-static@latest/icons/globe.svg" alt="" style="width:28px;height:28px">
+              </div>
+              <h3 style="font-family:var(--font-display);font-size:clamp(23px,2.9vw,33px);margin:0;color:var(--text-ink)">Landing Pages &amp; Sites</h3>
+              <p style="font-size:15px;color:var(--text-secondary);max-width:440px;margin:0">Sites estratégicos e responsivos que transformam visitantes em oportunidades — como este, feito pra Uziel Coffee.</p>
+              <div style="margin-top:8px">
+                <div style="width:520px;max-width:100%;height:360px;border-radius:10px;overflow:hidden;box-shadow:0 24px 80px rgba(0,0,0,0.35), 0 0 0 1px rgba(0,0,0,0.1);display:flex;flex-direction:column;background:#35363a">
+                  <div style="display:flex;align-items:center;height:44px;background:#202124;padding-right:8px">
+                    <div style="display:flex;gap:8px;padding:0 14px">
+                      <div style="width:12px;height:12px;border-radius:50%;background:#ff5f57"></div>
+                      <div style="width:12px;height:12px;border-radius:50%;background:#febc2e"></div>
+                      <div style="width:12px;height:12px;border-radius:50%;background:#28c840"></div>
+                    </div>
+                    <div style="height:34px;align-self:flex-end;padding:0 12px;display:flex;align-items:center;gap:8px;background:#35363a;border-radius:8px 8px 0 0;min-width:120px;max-width:220px;font:12px/1 system-ui,sans-serif;color:#e8eaed">
+                      <div style="width:14px;height:14px;border-radius:50%;background:#5f6368;flex-shrink:0"></div>
+                      <span style="flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">uzielcoffeesando.com.br</span>
+                    </div>
+                  </div>
+                  <div style="height:40px;background:#35363a;display:flex;align-items:center;gap:4px;padding:0 8px">
+                    <div style="width:28px;height:28px"></div>
+                    <div style="flex:1;height:30px;border-radius:15px;background:#282a2d;display:flex;align-items:center;gap:8px;padding:0 14px;margin:0 6px">
+                      <span style="flex:1;color:#e8eaed;font-size:13px;font-family:system-ui,sans-serif">uzielcoffeesando.com.br</span>
+                    </div>
+                    <div style="width:28px;height:28px"></div>
+                  </div>
+                  <iframe src="https://www.uzielcoffeesando.com.br/" style="width:100%;flex:1;border:none;background:#fff" title="Uziel Coffee — exemplo de site desenvolvido pela Riccio"></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div style="display:flex;align-items:center;justify-content:center;gap:20px;margin-top:24px">
+        <button id="svc-prev" data-carousel-nav style="width:40px;height:40px;border-radius:50%;border:1px solid var(--border-default);background:var(--surface-card);cursor:pointer;display:flex;align-items:center;justify-content:center">
+          <span style="width:16px;height:16px;background:var(--text-ink);-webkit-mask:url(https://unpkg.com/lucide-static@latest/icons/chevron-left.svg) center/contain no-repeat;mask:url(https://unpkg.com/lucide-static@latest/icons/chevron-left.svg) center/contain no-repeat"></span>
+        </button>
+        <div id="svc-dots" style="display:flex;gap:8px">
+          <button class="svc-dot" data-i="0" data-dot="true" style="width:9px;height:9px;border-radius:50%;border:none;cursor:pointer"></button>
+          <button class="svc-dot" data-i="1" data-dot="false" style="width:9px;height:9px;border-radius:50%;border:none;cursor:pointer"></button>
+          <button class="svc-dot" data-i="2" data-dot="false" style="width:9px;height:9px;border-radius:50%;border:none;cursor:pointer"></button>
+          <button class="svc-dot" data-i="3" data-dot="false" style="width:9px;height:9px;border-radius:50%;border:none;cursor:pointer"></button>
+        </div>
+        <button id="svc-next" data-carousel-nav style="width:40px;height:40px;border-radius:50%;border:1px solid var(--border-default);background:var(--surface-card);cursor:pointer;display:flex;align-items:center;justify-content:center">
+          <span style="width:16px;height:16px;background:var(--text-ink);-webkit-mask:url(https://unpkg.com/lucide-static@latest/icons/chevron-right.svg) center/contain no-repeat;mask:url(https://unpkg.com/lucide-static@latest/icons/chevron-right.svg) center/contain no-repeat"></span>
+        </button>
+      </div>
+    </div>
+   </div>
+  </section>
+
+  <div style="position:relative;height:0;z-index:20;pointer-events:none"><div style="position:absolute;left:0;right:0;top:-42px;height:84px;background:linear-gradient(to bottom, var(--surface-sunken) 0%, var(--surface-page) 100%)"></div></div>
+
+  <!-- CASES -->
+  <section id="cases" style="padding:clamp(48px,8vw,90px) clamp(16px,5vw,32px);max-width:1100px;margin:0 auto">
+   <div data-reveal="cases">
+    <div style="text-align:center"><span class="kicker rot-r">provas no papel</span></div>
+    <h2 style="font-family:var(--font-display);font-size:clamp(36px,5.8vw,60px);text-align:center;margin:0 0 4px">Cases reais</h2>
+    <svg class="title-squiggle" viewBox="0 0 140 16" width="140" height="16" style="margin:8px auto 14px" aria-hidden="true"><path d="M3 9 Q 22 2, 40 10 T 76 8 T 112 11 T 137 9" /></svg>
+    <p style="text-align:center;color:var(--text-muted);margin:0 0 40px;font-size:15px">Clique num case para ver os detalhes.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px">
+
+      <div data-reveal-item>
+       <div class="case-card tilt-card" data-case="case-arbora" style="cursor:pointer;background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm)">
+        <img src="assets/images/case-arbora.webp" alt="Árbora" style="width:100%;height:200px;object-fit:cover">
+        <div style="padding:22px">
+          <div style="font-size:12px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--accent-support);margin-bottom:6px">Higiene sustentável</div>
+          <h3 style="font-family:var(--font-display);font-size:24px;margin:0 0 8px;color:var(--text-ink)">Árbora</h3>
+          <div style="font-size:18px;font-weight:700;color:var(--accent-primary)">Identidade visual completa</div>
+        </div>
+       </div>
+      </div>
+
+      <div data-reveal-item>
+       <div class="case-card tilt-card" data-case="case-canto-do-rio" style="cursor:pointer;background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm)">
+        <img src="assets/images/case-canto-do-rio.webp" alt="Hotel Canto do Rio" style="width:100%;height:200px;object-fit:cover">
+        <div style="padding:22px">
+          <div style="font-size:12px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--accent-support);margin-bottom:6px">Hotelaria</div>
+          <h3 style="font-family:var(--font-display);font-size:24px;margin:0 0 8px;color:var(--text-ink)">Hotel Canto do Rio</h3>
+          <div style="font-size:18px;font-weight:700;color:var(--accent-primary)">+<span data-countup="29">0</span>% de crescimento no 1º mês</div>
+        </div>
+       </div>
+      </div>
+
+    </div>
+   </div>
+  </section>
+
+  <!-- CASE MODAL -->
+  <div id="case-modal" style="display:none;position:fixed;inset:0;background:rgba(44,26,14,0.55);z-index:200;align-items:center;justify-content:center;padding:20px">
+    <div id="case-modal-inner" style="background:var(--surface-card);border-radius:var(--radius-lg);max-width:560px;width:100%;padding:clamp(28px,5vw,44px);box-shadow:var(--shadow-lg);position:relative">
+      <button id="case-modal-close" style="position:absolute;top:18px;right:18px;background:none;border:none;cursor:pointer;width:28px;height:28px">
+        <span style="width:100%;height:100%;background:var(--text-muted);-webkit-mask:url(https://unpkg.com/lucide-static@latest/icons/x.svg) center/contain no-repeat;mask:url(https://unpkg.com/lucide-static@latest/icons/x.svg) center/contain no-repeat;display:block"></span>
+      </button>
+      <div id="case-modal-segment" style="font-size:12px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--accent-support);margin-bottom:8px"></div>
+      <h3 id="case-modal-client" style="font-family:var(--font-display);font-size:clamp(24px,3vw,32px);margin:0 0 10px"></h3>
+      <div id="case-modal-result" style="font-size:20px;font-weight:700;color:var(--accent-primary);margin-bottom:16px"></div>
+      <p id="case-modal-detail" style="font-size:15px;color:var(--text-secondary);line-height:1.65;margin:0"></p>
+    </div>
+  </div>
+
+  <div style="position:relative;height:0;z-index:20;pointer-events:none"><div style="position:absolute;left:0;right:0;top:-42px;height:84px;background:linear-gradient(to bottom, var(--surface-page) 0%, var(--surface-sunken) 100%)"></div></div>
+
+  <!-- DEPOIMENTOS -->
+  <section id="depoimentos" style="padding:clamp(48px,8vw,90px) clamp(16px,5vw,32px);background:var(--surface-sunken)">
+   <div data-reveal="testimonials">
+    <div style="max-width:1100px;margin:0 auto">
+      <div style="text-align:center"><span class="kicker rot-l">quem já sentiu na pele</span></div>
+      <h2 style="font-family:var(--font-display);font-size:clamp(36px,5.8vw,60px);text-align:center;margin:0 0 4px">Quem trabalhou com a gente</h2>
+      <svg class="title-squiggle" viewBox="0 0 140 16" width="140" height="16" style="margin:8px auto 34px" aria-hidden="true"><path d="M3 10 Q 22 3, 40 9 T 76 10 T 112 8 T 137 10" /></svg>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px">
+
+        <div data-reveal-item>
+         <div class="tilt-card" style="background:var(--surface-card);border:1px solid var(--accent-secondary-soft);border-radius:var(--radius-lg);padding:28px;box-shadow:var(--shadow-sm);text-align:center">
+          <div style="width:76px;height:76px;margin:0 auto 16px;border:3px solid var(--accent-secondary-soft);border-radius:50%;background:var(--surface-sunken);display:flex;align-items:center;justify-content:center;font-size:11px;color:var(--text-muted)">Foto</div>
+          <p style="font-family:var(--font-script);font-size:20px;color:var(--text-ink);line-height:1.4;margin:0 0 14px">"Espaço reservado para o depoimento do cliente."</p>
+          <div style="font-weight:700;font-size:14px;color:var(--text-ink)">Nome do cliente</div>
+          <div style="font-size:12px;color:var(--text-muted);margin-bottom:6px">Empresa</div>
+          <div style="display:inline-block;font-size:12px;font-weight:700;color:var(--color-brown-900);background:rgba(168,200,224,0.35);border-radius:999px;padding:4px 12px">Resultado alcançado</div>
+         </div>
+        </div>
+
+        <div data-reveal-item>
+         <div class="tilt-card" style="background:var(--surface-card);border:1px solid var(--accent-secondary-soft);border-radius:var(--radius-lg);padding:28px;box-shadow:var(--shadow-sm);text-align:center">
+          <div style="width:76px;height:76px;margin:0 auto 16px;border:3px solid var(--accent-secondary-soft);border-radius:50%;background:var(--surface-sunken);display:flex;align-items:center;justify-content:center;font-size:11px;color:var(--text-muted)">Foto</div>
+          <p style="font-family:var(--font-script);font-size:20px;color:var(--text-ink);line-height:1.4;margin:0 0 14px">"Espaço reservado para o depoimento do cliente."</p>
+          <div style="font-weight:700;font-size:14px;color:var(--text-ink)">Nome do cliente</div>
+          <div style="font-size:12px;color:var(--text-muted);margin-bottom:6px">Empresa</div>
+          <div style="display:inline-block;font-size:12px;font-weight:700;color:var(--color-brown-900);background:rgba(168,200,224,0.35);border-radius:999px;padding:4px 12px">Resultado alcançado</div>
+         </div>
+        </div>
+
+        <div data-reveal-item>
+         <div class="tilt-card" style="background:var(--surface-card);border:1px solid var(--accent-secondary-soft);border-radius:var(--radius-lg);padding:28px;box-shadow:var(--shadow-sm);text-align:center">
+          <div style="width:76px;height:76px;margin:0 auto 16px;border:3px solid var(--accent-secondary-soft);border-radius:50%;background:var(--surface-sunken);display:flex;align-items:center;justify-content:center;font-size:11px;color:var(--text-muted)">Foto</div>
+          <p style="font-family:var(--font-script);font-size:20px;color:var(--text-ink);line-height:1.4;margin:0 0 14px">"Espaço reservado para o depoimento do cliente."</p>
+          <div style="font-weight:700;font-size:14px;color:var(--text-ink)">Nome do cliente</div>
+          <div style="font-size:12px;color:var(--text-muted);margin-bottom:6px">Empresa</div>
+          <div style="display:inline-block;font-size:12px;font-weight:700;color:var(--color-brown-900);background:rgba(168,200,224,0.35);border-radius:999px;padding:4px 12px">Resultado alcançado</div>
+         </div>
+        </div>
+
+      </div>
+    </div>
+   </div>
+  </section>
+
+  <div style="position:relative;height:0;z-index:20;pointer-events:none"><div style="position:absolute;left:0;right:0;top:-42px;height:84px;background:linear-gradient(to bottom, var(--surface-sunken) 0%, var(--surface-page) 100%)"></div></div>
+
+  <!-- EQUIPE -->
+  <section id="equipe" style="padding:clamp(48px,8vw,90px) clamp(16px,5vw,32px);max-width:1100px;margin:0 auto">
+   <div data-reveal="team">
+    <div style="text-align:center"><span class="kicker rot-r">os cabeças por trás</span></div>
+    <h2 style="font-family:var(--font-display);font-size:clamp(36px,5.8vw,60px);text-align:center;margin:0 0 4px">Nossa equipe</h2>
+    <svg class="title-squiggle" viewBox="0 0 140 16" width="140" height="16" style="margin:8px auto 34px" aria-hidden="true"><path d="M3 8 Q 22 11, 40 4 T 76 9 T 112 10 T 137 7" /></svg>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:28px">
+
+      <div data-reveal-item>
+       <div class="tilt-card" style="text-align:center">
+        <div style="width:100%;aspect-ratio:1;border-radius:18px;background:var(--surface-sunken);display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--text-muted)">Foto de Gabriel</div>
+        <div style="font-weight:700;font-size:15px;margin-top:14px;color:var(--text-ink)">Gabriel Valdez</div>
+        <div style="font-size:13px;color:var(--text-muted);margin-top:2px">Estrategista de Marketing</div>
+       </div>
+      </div>
+
+      <div data-reveal-item>
+       <div class="tilt-card" style="text-align:center">
+        <div style="width:100%;aspect-ratio:1;border-radius:18px;background:var(--surface-sunken);display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--text-muted)">Em breve</div>
+        <div style="font-weight:700;font-size:15px;margin-top:14px;color:var(--text-muted)">Novo talento chegando</div>
+        <div style="font-size:13px;color:var(--text-muted);margin-top:2px">&nbsp;</div>
+       </div>
+      </div>
+
+      <div data-reveal-item>
+       <div class="tilt-card" style="text-align:center">
+        <div style="width:100%;aspect-ratio:1;border-radius:18px;background:var(--surface-sunken);display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--text-muted)">Em breve</div>
+        <div style="font-weight:700;font-size:15px;margin-top:14px;color:var(--text-muted)">Novo talento chegando</div>
+        <div style="font-size:13px;color:var(--text-muted);margin-top:2px">&nbsp;</div>
+       </div>
+      </div>
+
+      <div data-reveal-item>
+       <div class="tilt-card" style="text-align:center">
+        <div style="width:100%;aspect-ratio:1;border-radius:18px;background:var(--surface-sunken);display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--text-muted)">Em breve</div>
+        <div style="font-weight:700;font-size:15px;margin-top:14px;color:var(--text-muted)">Novo talento chegando</div>
+        <div style="font-size:13px;color:var(--text-muted);margin-top:2px">&nbsp;</div>
+       </div>
+      </div>
+
+      <div data-reveal-item>
+       <div class="tilt-card" style="text-align:center">
+        <div style="width:100%;aspect-ratio:1;border-radius:18px;background:var(--surface-sunken);display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--text-muted)">Em breve</div>
+        <div style="font-weight:700;font-size:15px;margin-top:14px;color:var(--text-muted)">Novo talento chegando</div>
+        <div style="font-size:13px;color:var(--text-muted);margin-top:2px">&nbsp;</div>
+       </div>
+      </div>
+
+      <div data-reveal-item>
+       <div class="tilt-card" style="text-align:center">
+        <div style="width:100%;aspect-ratio:1;border-radius:18px;background:var(--surface-sunken);display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--text-muted)">Em breve</div>
+        <div style="font-weight:700;font-size:15px;margin-top:14px;color:var(--text-muted)">Novo talento chegando</div>
+        <div style="font-size:13px;color:var(--text-muted);margin-top:2px">&nbsp;</div>
+       </div>
+      </div>
+
+    </div>
+   </div>
+  </section>
+
+  <div style="position:relative;height:0;z-index:20;pointer-events:none"><div style="position:absolute;left:0;right:0;top:-55px;height:110px;background:linear-gradient(to bottom, var(--surface-page) 0%, var(--color-brown-900) 100%)"></div></div>
+
+  <!-- CTA FINAL -->
+  <section id="contato" style="background:var(--color-brown-900);padding:clamp(56px,9vw,100px) clamp(16px,5vw,32px)">
+   <div data-reveal="cta">
+    <div style="max-width:640px;margin:0 auto;text-align:center">
+      <h2 style="font-family:var(--font-display);font-size:clamp(32px,5.6vw,60px);color:var(--color-cream-50);margin:0 0 6px;line-height:1.1">O seu negócio merece ser visto, sentido e principalmente, lembrado.</h2>
+      <p style="font-family:var(--font-script);font-size:clamp(22px,3vw,30px);color:var(--accent-emphasis);margin:16px 0 40px;transform:rotate(-1deg)">bora construir algo incrível junto?</p>
+
+      <div id="form-sent-msg" style="display:none;background:rgba(250,246,238,0.1);border:1px solid rgba(250,246,238,0.25);border-radius:var(--radius-lg);padding:28px;color:var(--color-cream-50)">
+        Perfeito! Abrimos o WhatsApp com sua mensagem — é só enviar por lá. 🌊
+      </div>
+      <form id="contact-form" style="display:flex;flex-direction:column;gap:14px;text-align:left">
+        <input type="text" required name="name" placeholder="Seu nome" style="font-family:var(--font-body);font-size:15px;padding:14px 16px;border-radius:var(--radius-md);border:none;background:var(--color-cream-50);color:var(--text-ink)">
+        <input type="email" required name="email" placeholder="Seu e-mail" style="font-family:var(--font-body);font-size:15px;padding:14px 16px;border-radius:var(--radius-md);border:none;background:var(--color-cream-50);color:var(--text-ink)">
+        <textarea required name="msg" placeholder="Conta um pouco sobre seu projeto..." rows="3" style="font-family:var(--font-body);font-size:15px;padding:14px 16px;border-radius:var(--radius-md);border:none;background:var(--color-cream-50);color:var(--text-ink);resize:vertical"></textarea>
+        <button type="submit" class="btn-playful" style="font-family:var(--font-body);font-weight:700;font-size:16px;padding:16px;border-radius:999px;border:none;background:var(--accent-emphasis);color:var(--color-brown-900);cursor:pointer;margin-top:6px">Bora conversar</button>
+      </form>
+
+      <div style="margin-top:28px">
+        <a href="https://wa.me/5511930199061" target="_blank" style="display:inline-flex;align-items:center;gap:10px;color:var(--color-cream-50);font-weight:600;font-size:14px;opacity:0.85">
+          <span style="width:16px;height:16px;background:var(--color-cream-50);-webkit-mask:url(https://unpkg.com/lucide-static@latest/icons/message-circle.svg) center/contain no-repeat;mask:url(https://unpkg.com/lucide-static@latest/icons/message-circle.svg) center/contain no-repeat"></span>
+          ou fale direto no WhatsApp: +55 11 93019-9061
+        </a>
+      </div>
+    </div>
+   </div>
+  </section>
+
+  <footer style="background:var(--color-brown-900);color:var(--color-cream-50);padding:clamp(48px,7vw,72px) clamp(20px,5vw,48px) 32px">
+    <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:40px;align-items:start">
+      <div>
+        <div style="font-family:var(--font-display);font-size:28px;font-weight:700;color:var(--accent-emphasis);margin-bottom:10px">Riccio <span style="font-family:var(--font-script);font-size:1.2em">di Marketing</span></div>
+        <p style="font-size:14px;line-height:1.6;color:var(--accent-secondary-soft);max-width:280px;margin:0">Marketing feito por gente de verdade. Sem fórmula padrão, sem piloto automático.</p>
+      </div>
+      <div>
+        <div style="font-size:13px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent-secondary-soft);margin-bottom:14px">Navegação</div>
+        <div style="display:flex;flex-direction:column;gap:10px;font-size:14px">
+          <a href="#sobre" style="color:var(--color-cream-50)">Sobre</a>
+          <a href="#servicos" style="color:var(--color-cream-50)">Serviços</a>
+          <a href="#cases" style="color:var(--color-cream-50)">Cases</a>
+          <a href="#equipe" style="color:var(--color-cream-50)">Equipe</a>
+          <a href="#contato" style="color:var(--color-cream-50)">Contato</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:13px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent-secondary-soft);margin-bottom:14px">Fale com a gente</div>
+        <div style="display:flex;flex-direction:column;gap:12px;font-size:14px">
+          <a href="https://wa.me/5511930199061" target="_blank" style="display:inline-flex;align-items:center;gap:10px;color:var(--color-cream-50)">
+            <span style="width:18px;height:18px;background:var(--accent-emphasis);-webkit-mask:url(https://unpkg.com/lucide-static@latest/icons/message-circle.svg) center/contain no-repeat;mask:url(https://unpkg.com/lucide-static@latest/icons/message-circle.svg) center/contain no-repeat"></span>
+            +55 11 93019-9061
+          </a>
+          <a href="https://instagram.com/ricciomkt" target="_blank" style="display:inline-flex;align-items:center;gap:10px;color:var(--color-cream-50)">
+            <span style="width:18px;height:18px;background:var(--accent-emphasis);-webkit-mask:url(assets/images/instagram.svg) center/contain no-repeat;mask:url(assets/images/instagram.svg) center/contain no-repeat"></span>
+            @ricciomkt
+          </a>
+        </div>
+      </div>
+    </div>
+    <div style="max-width:1100px;margin:40px auto 0;padding-top:24px;border-top:1px solid rgba(250,246,238,0.15);display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;font-size:12px;color:var(--accent-secondary-soft)">
+      <span>© 2026 Riccio di Marketing. Todos os direitos reservados.</span>
+      <a href="https://instagram.com/ricciomkt" target="_blank" style="display:inline-flex;align-items:center;gap:8px;color:var(--accent-secondary-soft)">
+        <span style="width:16px;height:16px;background:var(--accent-secondary-soft);-webkit-mask:url(assets/images/instagram.svg) center/contain no-repeat;mask:url(assets/images/instagram.svg) center/contain no-repeat"></span>
+        Siga no Instagram
+      </a>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP -->
+  <a href="https://wa.me/5511930199061" target="_blank" style="position:fixed;bottom:24px;right:24px;width:60px;height:60px;border-radius:50%;background:var(--accent-support);display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-lg);z-index:300;animation:waPulse 2.6s ease-out infinite">
+    <span style="width:28px;height:28px;background:var(--color-cream-50);-webkit-mask:url(https://unpkg.com/lucide-static@latest/icons/message-circle.svg) center/contain no-repeat;mask:url(https://unpkg.com/lucide-static@latest/icons/message-circle.svg) center/contain no-repeat"></span>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
